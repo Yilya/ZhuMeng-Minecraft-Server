@@ -1,0 +1,150 @@
+Version: 18
+Language:
+    Console:
+        Enabled: Marriage Master has been enabled!
+        Disabled: Marriage Master has been disabled.
+        LangUpdated: Language File has been updated.
+        NoPermPL: No Permission Plugin found, using default permissions.
+        NoEcoPL: No Economy Plugin found disable economy.
+        MetricsOffline: Metrics offline.
+        NotSupportedNet: Not supported MC version. Heart effect disabled.
+        UpdateUUIDs: Start updating database to UUIDs ...
+        UpdatedUUIDs: 'Updated %s accounts to UUIDs.'
+    Description:
+        Commands: commands
+        ListAll: 显示所有结婚的玩家.
+        Marry: '使范围 %s 个方块内的两个玩家结婚.'
+        Divorce: '使范围 %s 个方块内的玩家离婚.'
+        Priest: 任命一个神父.
+        TP: 传送到 ♥ 身边.
+        PvPOn: 启用和 ♥ 之间的PVP功能.
+        PvPOff: 禁用和 ♥ 之间的PVP功能.
+        SetHome: 设置你们的家.
+        TPHome: 传送回家.
+        Chat: 和 ♥ 私聊.
+        ChatToggle: 开启 / 关闭与 ♥ 私聊功能.
+        Reload: 重载配置文件.
+        ListenChat: 偷听他们在说什么.
+        Gift: 把手中的物品赠送给 ♥ .
+        Kiss: 亲吻 ♥ .
+        Update: 检查并下载更新.
+        SelfMarry: 求婚.
+        SelfDivorce: 离婚.
+        Surname: 更改你们的姓氏.
+        Backpack: 打开 ♥ 的背包.
+        BackpackOn: 允许 ♥ 使用你的背包.
+        BackpackOff: 禁止 ♥ 使用你的背包.
+        DelHome: 删除家.
+        TPHomeOther: 参观别人的爱巢~.
+        DelHomeOther: 删除别人的爱巢.
+    Ingame:
+        NotMarried: 单身狗无法使用这个命令呢.
+        NoMarriedPlayers: 目前暂时没有结婚的玩家.
+        NotAPriest: 你不是神父.
+        NoPermission: "您没有权限使用此命令."
+        PartnerOnline: 你的 ♥ 处于在线状态.
+        PartnerOffline: 你的 ♥ 处于离线状态.
+        PartnerNowOnline: 你的 ♥ 已上线.
+        PartnerNowOffline: 你的 ♥ 已离线.
+        PvPOn: 成功开启PVP功能.
+        PvPOff: 成功禁用PVP功能.
+        PlayerNoHome: "这个玩家暂时没有家呢."
+        NoHome: 没有家还想传送!
+        HomeTP: 欢迎回家!
+        HomeSet: 家的位置已经保存.
+        PlayerNotOn: '%s 处于离线状态.'
+        NoTPInVanish: 当 ♥ 处于隐身状态时，无法传送.
+        TP: 正在传送至 ♥ 身旁...
+        TPto: 你的 ♥ 正在传送到你身旁...
+        TPUnsafe: "目标地点不安全，传送已取消."
+        TPtoUnsafe: "你所在地点不安全，你的 ♥ 的传送请求已取消"
+        ListHL: 所有结婚玩家列表
+        ListHLMP: '当前页面 %1$d/%2$d - /marry list <页码>'
+        PvPIsOff: PVP功能处于禁用状态，无法攻击你的 ♥ .
+        ListeningStarted: You are now listening to the marry chat.
+        ListeningStoped: You are no longer listening to the marry chat.
+        PriestMarryOff: '神父 (%s) 处于离线状态, 婚礼取消.'
+        PlayerMarryOff: '%s 处于离线状态, 婚礼取消.'
+        PlayerCalledOff: '%s 取消了婚礼.'
+        YouCalledOff: 你取消了婚礼.
+        NoItemInHand: 你手中没有物品.
+        PartnerInvFull: 你的 ♥ 背包没有空间啦.
+        ItemSent: '你赠送了 %1$s %2$s 给你的 ♥ .'
+        ItemReceived: '你的 ♥ 送你了一份礼物： %1$s %2$s.'
+        GiftsOnlyInSurvival: 生存模式下，你只能赠送物品给你的 ♥ .
+        YouKissed: 你温柔地亲了 TA 一口.
+        YouGotKissed: TA 温柔地亲了你一口.
+        TooFarToKiss: 近一点，再近一点，不要害羞~
+        KissWait: '还要等待 %s 秒才能亲下一次.'
+        WorldNotAllowed: 你的 ♥ 在一个禁止传送的世界里.
+        CheckingForUpdates: '检查更新...'
+        Updated: '结婚插件升级成功，将在下次重启自动更新.'
+        NoUpdate: '结婚插件当前是最新版本.'
+        MarryConfirm: '%s 向你求婚. 接受 TA 的求婚请输入 /marry accept ，拒绝请输入 /marry deny'
+        HasMarried: '你和 %s 从此走到了一起.'
+        BroadcastMarriage: '恭喜 %1$s 和 %2$s 喜结连理.'
+        BroadcastDivorce: '%1$s 和 %2$s 离婚了.'
+        Divorced: '你和 %s 分开了. 从此你自由了.'
+        DivorcedPlayer: '%s 和你分开了. 从此你自由了.'
+        AlreadyMarried: 不准重婚!
+        OtherAlreadyMarried: '%s 已经有 ♥ 了.'
+        AlreadyOpenRequest: 你有一个没有得到回复的求婚请求.
+        MarryRequestSent: 求婚请求已发送.
+        TPMoved: 传送取消，请不要移动
+        TPDontMove: "%s 秒后进行传送，请不要移动."
+        NotYourself: 不准和自己结婚……
+        ChatJoined: 已转为私密聊天.
+        ChatLeft: 已转为公共聊天.
+        NaN: 请输入数字!
+        NotInRange: 你的 ♥ 太远了，让 TA 再靠近一些吧.
+        BackpackOnlyInSurvival: 必须在生存模式下才能使用 ♥ 的背包.
+        BackpackShareOn: 成功开启分享背包功能.
+        BackpackShareOff: 分享背包功能已关闭.
+        BackpackOpend: 你的 ♥ 打开了你的背包.
+        BackpackShareDenied: 你的 ♥ 不准你用背包.
+        HomeDeleted: 家已删除.
+    Economy:
+        NotEnough: "余额不足! 需要 %1$s."
+        PartnerNotEnough: 你的 ♥ 没有足够的钱!
+        NotEnoughPriestInfo: 新人们没有足够的钱.
+        HomeTPPaid: 'You paid %1$s for your home teleport. (%2$s left)'
+        SetHomePaid: 'You paid %1$s to set your Home (%2$s left)'
+        TPPaid: 'You paid %1$s for the Teleport (%1$s left)'
+        DivorcePaid: 'You paid %1$s for the annul of your marriage (%2$s left)'
+        DivNotEnoPriestI: The players you are trying to divorce don't have enough money.
+        MarriagePaid: 'You paid %1$s for your marriage (%2$s left)'
+        GiftPaid: 'You have paid %1$s for gifting an item to your partner (%2$s left)'
+    Priest:
+        NotWithHimself: "You can't marry %s with himself."
+        NotInRange: The players are not in range.
+        AlreadyMarried: You can't marry people that are already married.
+        BroadcastMarriage: '%1$s has married %2$s with %3$s.'
+        BroadcastDivorce: '%1$s has divorced %2$s from %3$s.'
+        Married: 'You have married %1$s with %2$s.'
+        HasMarried: '%1$s has married you with %2$s.'
+        MadeYouAPriest: '%s has made you a priest.'
+        MadeAPriest: 'You have made %s a priest.'
+        UnMadeYouAPriest: '%s has fired you as a priest.'
+        UnMadeAPriest: 'You have fired %s as a priest.'
+        PlayerNotMarried: The players is not married.
+        PartnerOffline: "%1$s's partner (%2$s) is not Online."
+        DivorcedPlayer: '%1$s has divorced your marriage with %2$s.'
+        Divorced: 'You have divorced %1$s and %2$s.'
+        Confirm: 'Accept the marriage with /marry accept or deny it with /marry deny'
+        AlreadyAccepted: 'You have already accepted the marriage.'
+        NoRequest: 'There is no open marriage request.'
+        NotYourSelf: 'You are not allowed to marry yourself.'
+        AlreadyOpenRequest: '%s has already one not answered marry request.'
+        DivPlayerOff: '%s is now offline, divorce canceled.'
+        DivPriestOff: 'Priest (%s) is now offline, divorce canceled.'
+        PlayerCanceled: '%s has denied the divorce.'
+        DivorceCanceled: You have denied the divorce.
+        DivorceConfirm: 'Accept the divorce with /marry accept or deny it with /marry deny'
+        SurnameSet: Surname changed.
+        DivorceRequestSent: 'Divorce request sent.'
+    Dialog:
+        DoYouWant: 'Do you %1$s, want to marry %2$s ?'
+        AndDoYouWant: 'And do you %1$s, want to marry %2$s ?'
+        Married: '以 Mojang 所赋予的合法权利，我现在宣布，你们正式结为合法夫妻。 你现在可以亲吻你的妻子了。'
+        YesIWant: '我愿意!'
+        NoIDontWant: '不，才不要!'

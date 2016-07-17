@@ -1,0 +1,755 @@
+#==============================O==============================#
+# I---------------------------------------------------------I #
+# |    Advanced Achievements 2.5.5 configuration - Readme   | #
+# 1---------------------------------------------------------1 #
+#==============================o==============================#
+
+# You can use Minecraft chat colours in Message/Name, but include '' around the whole text: '&4Colour'.
+# When using colours, you must also double apostrophes: '&2I''ve doubled apostrophes!'.
+# In command rewards, PLAYER designates the name of the player who got the achievement.
+# Only spaces, no tabs. Don't forget the indents, plugin won't work otherwise!
+# To check your file, use: yaml-online-parser.appspot.com
+# Do NOT delete any sections in the configuration file.
+# Possible items for rewards/Crafts/Places/Breaks: hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# Possible mobs for the Kills section: 	  hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+# Default config.yml file:  github.com/PyvesB/AdvancedAchievements/blob/master/src/main/resources/config.yml
+
+#=============================O=O=============================#
+# II-------------------------------------------------------II #
+# |                    General  settings                    | #
+# 2---------------------------------------------------------2 #
+#=============================o=o=============================#
+
+# Time in seconds between each /aach book.
+TimeBook: 7200
+
+# Time in seconds between each /aach list.
+TimeList: 0
+
+# Check for update on plugin launch and notify when an OP joins the game.
+CheckForUpdate: true
+
+# Set to true to activate firework effects when a player receives an achievement.
+Firework: true
+
+# Choose BALL_LARGE, BALL, BURST, CREEPER or STAR.
+FireworkStyle: BALL_LARGE
+
+# Number of players displayed on /aach top command.
+TopList: 5
+
+# Set to true to activate particle effects when receiving book and for players in top list.
+AdditionalEffects: true
+
+# Set to true to activate sound effects when receiving book and for players in top list.
+Sound: true
+
+# Set the icon of the plugin (default: shamrock, '\u2618').
+Icon: '\u2618'
+
+# Set the color of the plugin (default: 5, dark purple).
+Color: '5'
+
+# Notify other connected players when an achievement is received.
+ChatNotify: true
+
+# Separator between name, description and date on a book page.
+BookSeparator: ''
+
+# Separator between name and level in /aach list (default: arrow and spaces, ' \u2192 ').
+ListItemSeparator: ' \u2192 '
+
+# Set the format of the achievement name in /aach list (default: '%ICON% %NAME% %ICON%').
+ListAchievementFormat: '%ICON% %NAME% %ICON%'
+
+# Stop stats from increasing when player in creative mode (except Connections and PlayedTime).
+RestrictCreative: true
+
+# Stop stats from increasing when player in a specific world (delete the [] before using).
+ExcludedWorlds: []
+#  - yourWorld1
+#  - yourWorld2
+
+# Ignore vertical dimension (Y axis) when calculating distance statistics.
+IgnoreVerticalDistance: true
+
+# Don't show these categories in the achievement GUI or in the stats output (delete the [] before using).
+# Also prevent obtaining achievements for these categories and prevent stats from increasing.
+# If changed, do a full server reload, and not just /aach reload.
+DisabledCategories:
+  - Places
+  - ItemBreaks
+  - Shear
+  - Milk
+  - AnvilsUsed
+  - Enchantments
+  - ConsumedPotions
+  - ItemDrops
+
+# Obfuscate achievements that have not yet been received in /aach list.
+ObfuscateNotReceived: true
+
+# Hide categories with no achievements yet received in /aach list.
+HideNotReceivedCategories: false
+
+# Hide the reward display in /aach list.
+HideRewardDisplayInList: false
+
+# Display achievement name and description as screen titles.
+TitleScreen: true
+
+#=============================OOO=============================#
+# III-----------------------------------------------------III #
+# |                    Database settings                    | #
+# 3---------------------------------------------------------3 #
+#=============================ooo=============================#
+
+# Make a daily backup of your local database (if sqlite).
+DatabaseBackup: true
+
+# Database type, sqlite or mysql.
+DatabaseType: sqlite
+
+# Settings to link with MySQL database (ignore if sqlite).
+MYSQL:
+  Database: 'jdbc:mysql://localhost:3306/minecraft'
+  User: root
+  Password: root
+  
+#============================OO=OO============================#
+# IV-------------------------------------------------------IV #
+# |                  Performance settings                   | #
+# 4---------------------------------------------------------4 #
+#============================oo=oo============================#
+
+# DO NOT CHANGE THE FOLLOWING UNLESS YOU ARE AN EXPERIENCED USER. The intervals are in seconds. 
+# If any of the performance settings are changed, do a full server reload, and not just /aach reload.
+# Frequency of play time checks for players. Smaller values give more precision but more CPU usage.
+PlaytimeTaskInterval: 150
+
+# Calculates distance traveled by players. Smaller values give more precision but more CPU usage.
+DistanceTaskInterval: 5
+
+# Frequency of some statistics writes to the database.
+PooledRequestsTaskInterval: 60
+
+# Enable multithreading for database write operations.
+AsyncPooledRequestsSender: true
+
+#============================OOOOO============================#
+# V---------------------------------------------------------V #
+# |                  Action  achievements                   | #
+# 5---------------------------------------------------------5 #
+#============================ooooo============================#
+
+# When a player connects during the day.
+Connections:
+  '1':
+    Message: 'Welcome'
+    Name: '&3欢迎加入竹萌！'
+  '10':
+    Message: '第 10 次登录！'
+    Name: '&3时光 Lv1'
+  '100':
+    Message: '第 100 次登录'
+    Name: '&3时光 Lv2'
+  '1000':
+    Message: '第  1000 次登录'
+    Name: '&3时光 Lv3'
+  '10000':
+    Message: '第 10000 次登录'
+    Name: '时光 Lv4'
+  '100000':
+    Message: '第 100000 次登录'
+    Name: '时光 Lv MAX'
+
+# When a specific block is placed (specify material name, lower case).
+Places:
+  #diamond_block:
+    #'1':
+      #Message: '放置了 100 个石头'
+      #Name: '&c土豪 Lv1'
+
+# When a specific block is broken (specify material name, lower case).
+# Below, the notation log:1 means log item with metadata 1.
+Breaks:
+  coal_ore:
+    '100':
+      Message: '挖到 100 个煤矿'
+      Name: '&8煤老板 &fLv1'
+    '1000':
+      Message: '挖到 1000 个煤矿'
+      Name: '&8煤老板 &3Lv2'
+    '10000':
+      Message: '挖到 10000 个煤矿'
+      Name: '&8煤老板 &6Lv3'
+    '100000':
+      Message: '挖到 100000 个煤矿'
+      Name: '&8煤老板 &2Lv4'
+    '1000000':
+      Message: '挖到 1000000 个煤矿'
+      Name: '&8煤老板 &5LvMAX'
+  iron_ore:
+    '100':
+      Message: '挖到 100 个铁矿'
+      Name: '&f铁老大 &fLv1'
+    '1000':
+      Message: '挖到 1000 个铁矿'
+      Name: '&f铁老大 &3Lv2'
+    '10000':
+      Message: '挖到 10000 个铁矿'
+      Name: '&f铁老大 &6Lv3'
+    '100000':
+      Message: '挖到 100000 个铁矿'
+      Name: '&f铁老大 &2Lv4'
+    '1000000':
+      Message: '挖到 1000000 个铁矿'
+      Name: '&f铁老大 &5LvMAX'
+  gold_ore:
+    '100':
+      Message: '挖到 100 个金矿'
+      Name: '&e黄金矿工 &fLv1'
+    '1000':
+      Message: '挖到 1000 个金矿'
+      Name: '&e黄金矿工 &3Lv2'
+    '10000':
+      Message: '挖到 10000 个金矿'
+      Name: '&e黄金矿工 &6Lv3'
+    '100000':
+      Message: '挖到 100000 个金矿'
+      Name: '&e黄金矿工 &5LvMAX'
+  diamond_ore:
+    '10':
+      Message: '挖到 10 个钻石矿'
+      Name: '&b钻石收藏家 &fLv1'
+    '100':
+      Message: '挖到 100 个钻石矿'
+      Name: '&b钻石收藏家 &3Lv2'
+    '1000':
+      Message: '挖到 1000 个钻石矿'
+      Name: '&b钻石收藏家 &6Lv3'
+    '10000':
+      Message: '挖到 10000 个钻石矿'
+      Name: '&b钻石收藏家 &5LvMAX'
+  emerald_ore:
+    '10':
+      Message: '挖到 10 个绿宝石矿'
+      Name: '&a宝石鉴赏家 &fLv1'
+    '100':
+      Message: '挖到 100 个绿宝石矿'
+      Name: '&a宝石鉴赏家 &3Lv2'
+    '1000':
+      Message: '挖到 1000 个绿宝石矿'
+      Name: '&a宝石鉴赏家 &6Lv3'
+    '10000':
+      Message: '挖到 10000 个绿宝石矿'
+      Name: '&a宝石鉴赏家 &5LvMAX' 
+  log_2:1:
+    '100':
+      Message: '砍掉 100 块深色橡木'
+      Name: '&c想致富，先撸树!'
+      Reward:        
+        Command: give PLAYER 286 1 {ench:[{id:34,lvl:6}]}
+              
+# When a specific mob is killed (specify an entity name or poweredcreeper or player, lower case).
+Kills:
+  zombie:
+    '10':
+      Message: '击杀 10 个僵尸！'
+      Name: '&c生化危机 &fLv1'
+      Reward:        
+        Command: give PLAYER 283 1 {ench:[{id:17,lvl:6}]}
+    '100':
+      Message: '击杀 100 个僵尸！'
+      Name: '&c生化危机 &3Lv2'
+    '1000':
+      Message: '击杀 1000 个僵尸！'
+      Name: '&c生化危机 &6Lv3'
+    '10000':
+      Message: '击杀 10000 个僵尸！'
+      Name: '&c生化危机 &2Lv4'
+    '100000':
+      Message: '击杀 100000 个僵尸！'
+      Name: '&c生化危机 &5LvMAX'
+  spider:
+    '10':
+      Message: '击杀 10 只蜘蛛！'
+      Name: '&c节肢杀手 &fLv1'
+    '100':
+      Message: '击杀 100 只蜘蛛！'
+      Name: '&c节肢杀手 &3Lv2'
+      Reward:        
+        Command: give PLAYER 283 1 {ench:[{id:18,lvl:6}]}
+    '1000':
+      Message: '击杀 1000 只蜘蛛！'
+      Name: '&c节肢杀手 &6Lv3'
+    '10000':
+      Message: '击杀 10000 只蜘蛛！'
+      Name: '&c节肢杀手 &2Lv4'
+    '100000':
+      Message: '击杀 100000 只蜘蛛！'
+      Name: '&c节肢杀手 &5LvMAX'
+  creeper:
+    '10':
+      Message: '击杀 10 只Creeper'
+      Name: '&2调戏Creeper &fLv1'
+    '100':
+      Message: '击杀 100 只Creeper'
+      Name: '&2调戏Creeper &3Lv2'
+      Reward:        
+        Command: give PLAYER 283 1 {ench:[{id:19,lvl:6}]}
+    '1000':
+      Message: '击杀 1000 只Creeper'
+      Name: '&2调戏Creeper &6Lv3'
+    '10000':
+      Message: '击杀 10000 只Creeper'
+      Name: '&2调戏Creeper &2Lv4'
+    '100000':
+      Message: '击杀 100000 只Creeper'
+      Name: '&2调戏Creeper &5LvMAX'
+  enderman:
+    '1':
+      Message: '第一次击杀末影人'
+      Name: '&c这是？！'
+    '100':
+      Message: '击杀 100 个末影人'
+      Name: '&c小黑这么萌你们不要杀它'
+    '1000':
+      Message: '击杀 1000 个末影人'
+      Name: '&c都说了不要杀小黑辣！'
+    '10000':
+      Message: '击杀 10000 个末影人'
+      Name: '&c大屠杀'
+    '100000':
+      Message: '击杀 100000 个末影人'
+      Name: '&c丧心病狂'
+  skeleton:
+    '10':
+      Message: '击杀 10 个骷髅射手'
+      Name: '&7弓箭手的对决 &fLv1'
+    '100':
+      Message: '击杀 100 个骷髅射手'
+      Name: '&7弓箭手的对决 &3Lv2'
+    '1000':
+      Message: '击杀 1000 个骷髅射手'
+      Name: '&7弓箭手的对决 &6Lv3'
+      Reward:        
+        Command: give PLAYER 261 1 {ench:[{id:21,lvl:3}]}
+    '10000':
+      Message: '击杀 10000 个骷髅射手'
+      Name: '&7弓箭手的对决 &2Lv4'
+    '100000':
+      Message: '击杀 100000 个骷髅射手'
+      Name: '&7弓箭手的对决 &5LvMAX'
+  witch:
+    '10':
+      Message: '击杀 10 个女巫'
+      Name: '&c危险的女巫 &fLv1'
+      Reward:        
+        Command: give PLAYER minecraft:potion 1 8198
+    '100':
+      Message: '击杀 100 个女巫'
+      Name: '&c危险的女巫 &3Lv2'
+      Reward:        
+        Command: give PLAYER minecraft:potion 2 8259
+    '1000':
+      Message: '击杀 1000 个女巫'
+      Name: '&c危险的女巫 &6Lv3'
+      Reward:        
+        Command: give PLAYER minecraft:potion 2 8289
+    '10000':
+      Message: '击杀 10000 个女巫'
+      Name: '&c危险的女巫 &2Lv4'
+    '100000':
+      Message: '击杀 100000 个女巫'
+      Name: '&c危险的女巫 &5LvMAX'
+  ender_dragon:
+    '1':
+      Message: '击杀 1 只末影龙！'
+      Name: '&5末影龙的蛋白质含量是牛肉的五倍'
+    '10':
+      Message: '击杀 10 只末影龙！'
+      Name: '&5小姑娘，你这末影龙甜的掉牙啊！'
+          
+# When a specific item is crafted (specify material name, lower case).
+Crafts:
+  diamond_sword:
+    '1':
+      Message: '第一把钻石剑'
+      Name: '&c孤独求败'
+      Reward:
+        Money: 1
+  cake:
+    '1':
+      Message: '美味的蛋糕~'
+      Name: '&c生日快乐'
+  empty_map:
+    '1':
+      Message: '带上地图去旅行'
+      Name: '&3探险家'
+      
+# When the player dies.
+Deaths:
+  '1':
+    Message: '不管怎么费尽心力，人会受伤的时候就会受伤.'
+    Name: '&c安息吧 &fLv1'
+  '10':
+    Message: '第 10 次死亡'
+    Name: '&c安息吧 &3Lv2'
+  '100':
+    Message: '百战不殆'
+    Name: '&c安息吧 &6Lv3'
+  '1000':
+    Message: '真正的勇士，敢于直面淋漓的鲜血'
+    Name: '&c安息吧 &2Lv4'
+  '10000':
+    Message: '走到哪死到哪的节奏~'
+    Name: '&c安息吧 &5LvMAX'
+    
+# When an arrow is shot.
+Arrows:
+  '1':
+    Message: '人生第一发！'
+    Name: '&a百步穿杨 &fLv1'
+  '100':
+    Message: '不要射得太快哟( ▼-▼ )'
+    Name: '&a百步穿杨 &3Lv2'
+  '1000':
+    Message: '从实交来射杀了多少无辜的动物←←'
+    Name: '&a百步穿杨 &6Lv3'
+  '10000':
+    Message: '万发达成！'
+    Name: '&a百步穿杨 &2Lv4'
+  '100000':
+    Message: '此箭一出，天地变色'
+    Name: '&a百步穿杨 &5LvMAX'
+    
+# When a snowball is thrown.  
+Snowballs:
+  '10':
+    Message: 'biubiubiu~'
+    Name: '&f打雪仗 &fLv1' 
+  '100':
+    Message: '扔了 100 个雪球'
+    Name: '&f打雪仗 &3Lv2'
+  '1000':
+    Message: '扔了 1000 个雪球'
+    Name: '&f打雪仗 &6Lv3'
+  '10000':
+    Message: '扔了 10000 个雪球'
+    Name: '&f打雪仗 &2Lv4'
+  '100000':
+    Message: '扔了 100000 个雪球'
+    Name: '&f打雪仗 &5LvMAX'
+    
+# When an egg is thrown.  
+Eggs:
+  '1':
+    Message: '扔出的第 1 枚鸡蛋'
+    Name: '&3破壳而出' 
+  '100':
+    Message: '扔鸡蛋全国竞速竞标赛正在举行……'
+    Name: '&c鸡蛋冲锋枪 &fLv1'
+  '1000':
+    Message: '扔鸡蛋全国竞速竞标赛正在举行……'
+    Name: '&c鸡蛋冲锋枪 &3Lv2'
+  '10000':
+    Message: '扔鸡蛋全国竞速竞标赛正在举行……'
+    Name: '&c鸡蛋冲锋枪 &6Lv3'
+  '100000':
+    Message: '扔鸡蛋全国竞速竞标赛正在举行……'
+    Name: '&c鸡蛋冲锋枪 &5LvMAX'
+    
+# When a fish is caught. 
+Fish:
+  '10':
+    Message: '快看看钓到了什么！'
+    Name: '&c愿者上钩 &fLv1'
+    Reward:        
+        Command: give PLAYER 346 1 {ench:[{id:19,lvl:3}]}
+  '100':
+    Message: '快看看钓到了什么！'
+    Name: '&c愿者上钩 &3Lv2'
+  '1000':
+    Message: '快看看钓到了什么！'
+    Name: '&c愿者上钩 &6Lv3'
+  '10000':
+    Message: '快看看钓到了什么！'
+    Name: '&c愿者上钩 &2Lv4'
+  '100000':
+    Message: '快看看钓到了什么！'
+    Name: '&c愿者上钩 &5LvMAX'
+
+# When a tool/armor/weapon is broken.  
+ItemBreaks:
+  #'1':
+    #Message: '第一次将工具使用至消失'
+    #Name: '&c不要哭站起来撸'
+
+# When an item is eaten.  
+EatenItems:
+  '1000':
+    Message: '我们用味道搭讪，用一块蛋糕说你好。唇齿是连接生命个体与世界的大门，味道是钥匙。'
+    Name: '&c舌尖上的中国'  
+    
+# When a sheep is sheared.
+Shear:
+  #'100':
+    #Message: '&2一百只羊惨遭毒手'
+    #Name: '&c脱衣狂魔'
+    
+# When a cow is milked.
+Milk:
+  #'1':
+    #Message: '第 1 桶牛奶'
+   #Name: '&c奶我一口'   
+    
+# When a trade with a villager is made.
+Trades:
+  '10':
+    Message: '和 10 个村民完成交♂易'
+    Name: '&c肮脏的♂交易'  
+    
+# When an anvil is used.
+AnvilsUsed:
+ #'1':
+    #Message: '使用铁砧修复 1 件物品'
+    #Name: '&c修复' 
+    
+# When an enchantment is performed.
+Enchantments:
+  #'6':
+    #Message: '为 6 件装备附魔'
+    #Name: '&c附魔学徒'
+  #'66':
+    #Message: '为 66 件装备附魔'
+    #Name: '&c附魔大师' 
+    
+# When a bed is entered.  
+Beds:  
+  '5':
+    Message: '使用 5 次床'
+    Name: '&c晚安好梦~' 
+    
+# Maximum level reached.    
+MaxLevel:  
+  '30':
+    Message: '等级达到 30 级'
+    Name: '&c成长的第一步'
+  '100':
+    Message: '等级达到 100 级'
+    Name: '&c在座的各位都是垃圾'  
+  '200':
+    Message: '等级达到 200 级'
+    Name: '&c实力装逼'
+    
+# When a potion is consumed.
+ConsumedPotions:
+  #'100':
+    #Message: '整天喝些奇怪的饮料...'
+    #Name: '&c酗“酒”者' 
+    
+# Amount of time played on the server (in hours, use integers).
+PlayedTime:
+  '1':
+    Message: '差一年一个月一天一个时辰都不算一辈子'
+    Name: '&c在线 1 小时'
+    Reward:
+        Money: 1
+  '24':
+    Message: '生命中任何一天的结束，便永不重来'
+    Name: '&c在线 24 小时'
+    Reward:
+        Money: 2
+  '168':
+    Message: '时间是让人猝不及防的东西，晴时有风阴有时雨，争不过朝夕，又念着往昔'
+    Name: '&c在线 168 小时'
+    Reward:
+        Money: 10
+  '500':
+    Message: '人生天地之间,若白驹过隙,忽然而已'
+    Name: '&c在线 500 小时'
+    Reward:
+        Money: 20
+  '1000':
+    Message: '这是你在服务器度过的第1000个小时'
+    Name: '&c沧海桑田'
+    Reward:
+        Money: 30
+  '5040':
+    Message: 'impossible'
+    Name: '&c在线 5040 小时'
+    Reward:
+        Money: 100
+    
+# When a distance is traveled by foot.
+DistanceFoot:
+  '1000':
+    Message: '步行 1000 米'
+    Name: '&c千里之行始于足下' 
+  '10000':
+    Message: '步行 10000 米'
+    Name: '&c长征' 
+    Reward:
+        Command: give PLAYER 317 1 name:&5Adidas限量版黄金跑鞋 lore:售价10000￥
+  '108000':
+    Message: '步行 十万八千 米'
+    Name: '&c一个筋斗云的距离' 
+    Reward:
+        Command: give PLAYER 418 1 name:&5金马铠 lore:对自己的双腿好一点吧~  
+    
+# When a distance is traveled on a pig.
+DistancePig:
+  '100':
+    Message: '骑着猪经过 100 米'
+    Name: '&c神奇的胡萝卜钓竿'
+  '10000':
+    Message: '骑着猪经过 10000 米'
+    Name: '&c瘦成一道闪电'
+    
+# When a distance is traveled on a horse.
+DistanceHorse:
+  '10000':
+    Message: '策马奔腾 10000 米'
+    Name: '&c速度七十迈'
+DistanceHorse:
+  '100000':
+    Message: '策马奔腾 100000 米'
+    Name: '&c随风奔跑自由是方向'
+    Reward:
+        Command: give PLAYER 421 2
+    
+# When a distance is traveled in a minecart.
+DistanceMinecart:
+  '10000':
+    Message: '乘坐矿车经过 10000 米'
+    Name: '&c旅途愉快'
+
+# When a distance is traveled in a boat.
+DistanceBoat:
+  '100':
+    Message: '乘风破浪会有时'
+    Name: '&c扬帆起航'
+  '23333':
+    Message: '有时候我在清晨醒来，我的灵魂甚至还是湿的，远远的，海洋鸣响并且发出回声'
+    Name: '&c拥抱海洋'
+  '100000':
+    Message: '我们最终都要远行，最终都要跟稚嫩的自己告别'
+    Name: '&c远行'
+
+# When a distance is traveled with elytra.
+# (ignored on Minecraft versions prior to 1.9)
+DistanceGliding:
+  '100':
+    Message: '咦居然没摔死'
+    Name: '&3信仰之跃'
+  '1000':
+    Message: '飞过 1000 米'
+    Name: '&3麻麻快看有人在飞!'
+  '10000':
+    Message: '飞过 10000 米'
+    Name: '&3翱翔'
+
+# When an item is dropped on the ground.
+ItemDrops:
+  #'100':
+    #Message: '最讨厌乱扔东西的人惹~'
+    #Name: '&c乱丢垃圾'
+    
+# When soil is plowed with a hoe.
+HoePlowings:
+  '10':
+    Message: '用锄头锄 10 个泥土'
+    Name: '&c自力更生'
+    Reward:                 
+        Item: cookie 5
+  '1000':
+    Message: '用锄头锄 1000 个泥土'
+    Name: '&c农场主'
+    Reward:                 
+        Command: give PLAYER 294 1 name:&5金坷垃限定版锄头
+    
+# When bone meal is used to fertilise plants.
+Fertilising:
+  '10':
+    Message: '撒骨粉 10 次'
+    Name: '&c菜农'
+  '100':
+    Message: '撒骨粉 100 次'
+    Name: '&c园丁'
+  '1000':
+    Message: '撒骨粉 1000 次'
+    Name: '&c园艺家'
+    
+# When an animal is tamed.
+Taming:
+  '1':
+    Message: '驯服 1 只动物'
+    Name: '&c乖乖♂听话'
+    
+# When a potion is brewed.
+Brewing:
+  '1':
+    Message: '酿造 1 瓶药剂'
+    Name: '&c初识药剂'
+  '100':
+    Message: '酿造 100 瓶药剂'
+    Name: '&c药剂师'
+    Reward:                 
+        Command: give PLAYER 440 5 name:&5半成品的箭 lore:拥有无穷的威力……
+  '1000':
+    Message: '酿造 1000 瓶药剂'
+    Name: '&c炼药厂'  
+    Reward:                 
+        Command: give PLAYER 440 64 name:&5半成品的箭 lore:拥有无穷的威力……
+    
+# When a firework is launched.
+Fireworks:
+  '10':
+    Message: '点燃 10 发烟花'
+    Name: '&c漫天华彩'
+  '100':
+    Message: '我会记得，你的光芒温暖过我的眼睛。而我，也曾闪耀在你的夜空里'
+    Name: '&c群星闪耀'
+    Reward:                 
+        Command: give PLAYER 402 64 name:&5这是…… lore:似乎可以用来做烟花
+
+# When a music disc is played.
+MusicDiscs:
+  '1':
+    Message: '第 1 次使用唱片机!'
+    Name: '&3动次打次'
+  '100':
+    Message: '一枚闪闪发光的DJ'
+    Name: '&3观众朋友们你们的手在哪里!'
+
+# When a player teleports with an enderpearl.
+EnderPearls:
+  '10':
+    Message: '有时候可以救你一命哟'
+    Name: '&5瞬移!'
+  '1000':
+    Message: '无数次使用珍珠后 你懂得了时空的奥秘...'
+    Name: '&5时空奥秘'
+    
+#===========================OOO=OOO===========================#
+# VI-------------------------------------------------------VI #
+# |                  Command achievements                   | #
+# 6---------------------------------------------------------6 #
+#===========================ooo=ooo===========================#
+    
+# Let achievement commands be given several times.
+MultiCommand: true
+    
+# A player with achievement.give (or the console) can use /aach give yourAch1 PLAYER to give
+# yourAch1 achievement to PLAYER. The /aach give command does NOT work with other achievements.
+Commands:
+  yourAch1:
+    Message: You took part in the special event!
+    Name: Special Event Achievement!
+    
+#===========================OOOOOOO===========================#
+# VII-----------------------------------------------------VII #
+# |         Parameters to appear in future versions         | #
+# 7---------------------------------------------------------7 #
+#===========================ooooooo===========================#

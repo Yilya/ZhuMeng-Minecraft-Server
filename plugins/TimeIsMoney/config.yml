@@ -1,0 +1,32 @@
+give_money_every_second: 300
+afk_payout: false
+#You can add more payouts by copy and paste them. Don't forget to change the numbers!
+store-money-in-bank: false
+#Set choose-payout-by-chance to true in order to choose the payouts by chances. Replace the "permission" to "chance", e.g. chance: 20. 
+choose-payout-by-chance: false
+payouts:
+  1:
+    payout_amount: 0.02
+    max_payout_per_day: 100
+    chance: 100
+    permission:
+message: "&a在线奖励&c%money%元 &a"
+message_payoutlimit_reached: "&c今日在线奖励已经够多啦 你已经获得了 0$"
+message_afk: "&c离开状态无法获得在线奖励"
+message_actionbar: "&a在线奖励&c%money%元 &a"
+message_payoutlimit_reached_actionbar: "&c今日在线奖励已经够多啦 你已经获得了 0$"
+message_afk_actionbar: "&c离开状态无法获得在线奖励"
+display-messages-in-chat: false
+display-messages-in-actionbar: false
+display-messages-in-actionbar-time: 10
+#ATM -> Place down a sign with [atm] on the first line to use it!
+message_atm_noperms: "&c没有 提款机 的使用权限!"
+message_atm_nomoneyinbank: "&c银行账户中没有足够的存款"
+message_atm_nomoney: "&c余额不足"
+atm_title: "&cATM"
+atm_withdraw: "&c取款"
+atm_deposit: "&c存款"
+atm_balance: "&c账户余额:"
+debug-log: false
+auto-update: true
+configuration-version: 12

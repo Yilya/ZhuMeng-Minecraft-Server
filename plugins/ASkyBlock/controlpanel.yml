@@ -1,0 +1,59 @@
+# Control panel file
+# For colors in panel name use &. Note client must restart if changes made as it caches inventory.
+# [island] refers to the island command, e.g., /island
+# material format is MATERIAL:DURABILITY where DURABILITY is optional
+# description can include color codes using & and new lines using |
+
+default:
+  panelname: '&1常用命令'
+  buttons:
+    0:
+      material: GRASS
+      description: '返回自己的岛屿'
+      command: '[island] go'
+      nextsection: ''
+    1:
+      material: LAVA_BUCKET
+      description: '打开迷你商店'
+      command: '[island] ms'
+      nextsection: ''
+    2:
+      material: SKULL_ITEM
+      description: '查看团队成员'
+      command: '[island] team'
+      nextsection:
+    3:
+      material: BED
+      description: '设置家'
+      command: '[island] sethome'
+      nextsection:
+    4:
+      material: ACACIA_STAIRS
+      description: '查看岛屿等级'
+      command: '[island] level'
+      nextsection:
+    5:
+      material: BOOK
+      description: '查看前 10 的岛屿'
+      command: '[island] top'
+      nextsection:
+    6:
+      material: SIGN
+      description: '查看可用的岛屿传送点'
+      command: '[island] warps'
+      nextsection:
+    7:
+      material: BEDROCK
+      description: '前往空岛世界出生地'
+      command: '[island] spawn'
+      nextsection:
+    8:
+      material: SAPLING
+      description: '改变空岛的生物群系'
+      command: '[island] biomes'
+      nextsection: ''
+    9:
+      material: ENCHANTMENT_TABLE
+      description: '空岛挑战!'
+      command: 'asc'
+      nextsection: ''
