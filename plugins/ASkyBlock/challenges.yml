@@ -456,7 +456,7 @@ challenges:
       repeatExpReward: 0
     enderpearls:
       friendlyname: '[专家] 末影珍珠'
-      description: '从末影人身上收集 1 组末影珍珠'
+      description: '从末影人身上收集 64 个末影珍珠'
       icon: ENDER_PEARL
       level: '专家'
       type: inventory
