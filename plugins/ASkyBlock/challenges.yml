@@ -476,15 +476,15 @@ challenges:
       maxtimes: 100
     slimeballfarmer:
       friendlyname: '[专家] 史莱姆农场'
-      description: '从史莱姆身上收集 1 组粘液球'
+      description: '从史莱姆身上收集 16 个粘液球'
       icon: SLIME_BALL
       level: '专家'
       type: inventory
-      requiredItems: 'SLIME_BALL:64'
+      requiredItems: 'SLIME_BALL:16'
       takeItems: true
       itemReward: 'GOLD_INGOT:4 IRON_ORE:4'
       rewardText: '金锭 4 块，铁矿 4 个'
-      moneyReward: 1
+      moneyReward: 2
       expReward: 100
       permissionReward: ''
       repeatable: true

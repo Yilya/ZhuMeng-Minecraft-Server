@@ -222,7 +222,7 @@ general:
    # Check for updates - this will tell Ops and the console if there is a new
    # version available. It contacts dev.bukkit.org to request the latest version
    # info. It does not download the latest version or change any files
-   checkupdates: true
+   checkupdates: false
 
    # Sea level height (don't changes this mid-game unless you delete the world)
    # Minimum is 0, which means you are playing sky block!
@@ -263,7 +263,7 @@ general:
    nethertrees: true  
 
    #How long a player must wait before they can reset their island again in second
-   resetwait: 300
+   resetwait: 86400
 
    #The number of seconds to wait for confirmation of a reset
    resetconfirmwait: 10
@@ -271,7 +271,7 @@ general:
    #How long a player must wait until they can rejoin a team island after being
    #kicked in minutes. This slows the effectiveness of players repeating challenges
    #by repetitively being invited to a team island.
-   invitewait: 60
+   invitewait: 86400
 
    # Use new level calculation (super speedy). Set to false if you want the old
    # method (slower).
@@ -322,7 +322,7 @@ general:
    - spawnmob
 
    # Ops receive damage from acid (Set to true if you want Ops to play properly)
-   damageops: false
+   damageops: true
 
    # Acid damage to player per second by being in acid if they have no armor on.
    # A fully health player has 20 health points. Players will regen some health
@@ -466,7 +466,7 @@ general:
    # disabled until death from the void or until you hit something.
    # See commands that this will block too
    # Using "*" (with quotes) will block ALL commands when falling
-   allowfallingteleport: true
+   allowfallingteleport: false
    blockingcommands:
    - "*"
 

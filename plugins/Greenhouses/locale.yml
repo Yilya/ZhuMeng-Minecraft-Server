@@ -4,23 +4,23 @@
 # If this file is deleted, then it will be recreate at the next reload.                   #
 ###########################################################################################
 general:
-   notavailable: "Greenhouses are not available in this world"
-   greenhouses: "Greenhouses"
-   biome: "Biome"
-   owner: "Owner"
+   notavailable: "&f当前世界 &3温室&f 不可用"
+   greenhouses: "&3温室"
+   biome: "生物群系"
+   owner: "主人"
 
 help:
-   help: "help"
-   make: "Tries to make a greenhouse"
-   remove: "Removes a greenhouse that you are standing in if you are the owner"
-   info: "How to make a greenhouse"
-   list: "Lists all the greenhouse biomes that can be made"
-   recipe: "Tells you how to make greenhouse biome"
-   opengui: "Opens the Greenhouse GUI"
+   help: "帮助"
+   make: "尝试创建一个温室"
+   remove: "移除你所处位置上的温室"
+   info: "温室创建帮助"
+   list: "查看全部可创建的温室类型"
+   recipe: "查看温室所需材料"
+   opengui: "打开温室操作界面"
 
 list:
-   title: "[Greenhouse Biome Recipes]"
-   info: "Use /greenhouse recipe <number> to see details on how to make each greenhouse"
+   title: "[温室生物群系创建指南]"
+   info: "指令 /greenhouse recipe <number> 查看详情"
 
 
 ################
@@ -28,15 +28,15 @@ list:
 ################
 error:
    #"Error: Invalid Player (check spelling)"
-   unknownPlayer: "That player is unknown."
-   noPermission: "You don't have permission to use that command!"
-   commandNotReady: "You can't use that command right now."
-   offlinePlayer: "That player is offline or doesn't exist."
-   unknownCommand: "Unknown command."
-   greenhouseProtected: "Greenhouse protected"
+   unknownPlayer: "该玩家不存在."
+   noPermission: "没有权限!"
+   commandNotReady: "现在你不能使用该命令."
+   offlinePlayer: "玩家离线或不存在."
+   unknownCommand: "未知命令."
+   greenhouseProtected: "温室已被保护"
    move: "Move to a greenhouse you own first."
-   notowner: "You must be the owner of this greenhouse to do that."
-   removing: "Removing greenhouse!"
+   notowner: "不是温室的主人，无法使用该命令."
+   removing: "移除温室!"
    notyours: "This is not your greenhouse!"
    notinside: "You are not in a greenhouse!"
    tooexpensive: "You cannot afford [price]" 
@@ -44,23 +44,23 @@ error:
    norecipe: "Cannot make a greenhouse!"
    
 messages:
-   enter: "Entering [owner]'s [biome] greenhouse!"
-   leave: "Now leaving [owner]'s greenhouse."
+   enter: "进入 [owner]的 [biome] 温室!"
+   leave: "离开 [owner]的温室."
    youarein: "You are now in [owner]'s [biome] greenhouse!"
    removed: "This greenhouse is no more..."
    removedmessage: "A [biome] greenhouse of yours is no more!"
    ecolost: "Your greenhouse at [location] lost its eco system and was removed."
 
 info:
-   title: "&A[How To Build A Greenhouse]"
+   title: "&A[如何创建一个温室]"
    instructions:
-     - "&EMake a box out of out of glass with 4 walls and a flat glass"
-     - "&Eroof and add up to &F4 doors &Ein the walls."
+     - "&E用玻璃(染色也可)搭一个屋子，墙和屋顶都是玻璃，屋顶要平的"
+     - "&E给屋子加上门，最多可以有 &F4 &E个."
      - "&EPlace &F1 hopper &Ein a wall or roof and add water buckets."
      - "&Eto make snow and/or bonemeal to grow plants automatically."
      - "&ECheck the biome recipes for what blocks must be inside a"
      - "&Egreenhouse to make one successfully."  
-   info: "[Greenhouse Info]"
+   info: "[温室信息]"
    none: "None"
    nomore: "&4You cannot build any more greenhouses!"
    onemore: "&6You can build one more greenhouse."

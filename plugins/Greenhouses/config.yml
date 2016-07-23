@@ -32,7 +32,7 @@ greenhouses:
    # (1.0 = always, 0.0 = never)
    snowchance: 1
    # How many blocks should get snow 1 = all of them, 0 = none, 0.1 = 1 in 10
-   snowdensity: 0.1
+   snowdensity: 0.3
 
    # Biome activity
    # How often should greenhouse biomes be checked to make sure they are still valid

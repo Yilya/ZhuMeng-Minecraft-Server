@@ -288,7 +288,7 @@ island:
   resetYouHave: "§6你还有§b [number] §6次重新开始的机会."
   subtitle: §a§l请务必努力生存下去
   subtitlecolor: "blue"
-  teleport: "§b[岛屿娘]:§6欢迎回来~我的主人. §e(输入§c/[label] help §e获取更多帮助)"
+  teleport: "§b[岛屿娘]:§6欢迎回来~我的主人. §e进入空岛前记得把主世界背包清空~"
   title: "空岛生存"
   titlecolor: "gold"
   url: ""

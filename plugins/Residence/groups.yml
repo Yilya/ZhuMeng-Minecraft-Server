@@ -50,13 +50,13 @@ Groups:
        # Options relating to the Lease system.
        Lease:
           # The maximum number of days to allow leases.
-          MaxDays: 30
+          MaxDays: 365
           # The number of days to add to the lease following a '/res lease renew' command.
           RenewIncrement: 30
        #Options related to the rent system
        Rent:
            #determines how many residences can be rented by players of this group at once
-           MaxRents: 30
+           MaxRents: 365
            #determines how many residences can be set for rent by players of this group at once
            MaxRentables: 30
        # Options relating to the Residence Economy.
@@ -150,13 +150,13 @@ Groups:
        # Options relating to the Lease system.
        Lease:
           # The maximum number of days to allow leases.
-          MaxDays: 60
+          MaxDays: 365
           # The number of days to add to the lease following a '/res lease renew' command.
           RenewIncrement: 30
        #Options related to the rent system
        Rent:
            #determines how many residences can be rented by players of this group at once
-           MaxRents: 60
+           MaxRents: 365
            #determines how many residences can be set for rent by players of this group at once
            MaxRentables: 60
        # Options relating to the Residence Economy.
@@ -251,13 +251,13 @@ ta: #group name
        # Options relating to the Lease system.
        Lease:
           # The maximum number of days to allow leases.
-          MaxDays: 60
+          MaxDays: 365
           # The number of days to add to the lease following a '/res lease renew' command.
           RenewIncrement: 30
        #Options related to the rent system
        Rent:
            #determines how many residences can be rented by players of this group at once
-           MaxRents: 60
+           MaxRents: 365
            #determines how many residences can be set for rent by players of this group at once
            MaxRentables: 60
        # Options relating to the Residence Economy.
