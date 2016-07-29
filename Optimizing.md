@@ -1,6 +1,7 @@
 # [Optimizing Network Performance For China](http://183.91.49.53/public/sla/slaPerformanceNew.html)
 ##### 欢迎提 issue 帮助服务器更好地优化网络
 ##### 本文档中出现的地址仅供测试之用，平时连接服务器直接输入地址```mc.imyvm.com```即可
+##### 除了测试……平时不要用下面这些长长的地址，好么！
 ##### 感谢 meesen, MrCoke_, Ricky1000, Elapse321, alex44828, Yu_Qiu, Walter401, HUGOHANG, huangwang, fuxiaobai 的帮助
 ##### ★ 号代表该地区已优化完成，线路为最佳选择
 ##### ♡ 号代表有玩家参与该地区的路由优化
@@ -171,7 +172,7 @@
   ```
   jp-1.iij.as9370.imyvm.com           偶尔会抽风
 
-  jp-2.kddi.as9370.imyvm.com          备用
+  jp-2.kddi.as2516.imyvm.com          备用
   ```
   - **香港**
   ```
