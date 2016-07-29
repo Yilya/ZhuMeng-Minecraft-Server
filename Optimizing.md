@@ -15,7 +15,7 @@
     - **♡★浙江**  ```jp-1.iij.as9370.imyvm.com```
     - **♡江苏**  ```jp-1.iij.as9370.imyvm.com```
     - **江西**  ```jp-1.iij.as9370.imyvm.com```
-    - **福建**  ```jp-1.iij.as9370.imyvm.com```
+    - **♡福建**  ```hk-1.cn2.as45102.imyvm.com```
     - **安徽**  ```jp-1.iij.as9370.imyvm.com```
     - **山东**  ```hk-1.cn2.as45102.imyvm.com```
 
