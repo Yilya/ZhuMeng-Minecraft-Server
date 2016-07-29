@@ -106,24 +106,24 @@
 
 ## **移动**
 * ### 华东区域
-  - **上海**  ```jp-1.iij.as9370.imyvm.com```
-  - **♡★浙江**  ```jp-1.iij.as9370.imyvm.com```
-  - **江苏**  ```jp-1.iij.as9370.imyvm.com```
-  - **江西**  ```jp-1.iij.as9370.imyvm.com```
-  - **福建**  ```jp-1.iij.as9370.imyvm.com```
-  - **安徽**  ```jp-1.iij.as9370.imyvm.com```
-  - **山东**  ```jp-1.iij.as9370.imyvm.com```
+  - **上海**  ```hk-2.pccw.as133752.imyvm.com```
+  - **♡★浙江**  ```hk-2.pccw.as133752.imyvm.com```
+  - **江苏**  ```hk-2.pccw.as133752.imyvm.com```
+  - **江西**  ```hk-2.pccw.as133752.imyvm.com```
+  - **福建**  ```hk-2.pccw.as133752.imyvm.com```
+  - **安徽**  ```hk-2.pccw.as133752.imyvm.com```
+  - **山东**  ```hk-2.pccw.as133752.imyvm.com```
 
 * ### 华南区域
   - **★广州**  ```hk-1.cn2.as45102.imyvm.com```
   - **★深圳**  ```hk-1.cn2.as45102.imyvm.com```
-  - **广西**  ```jp-1.iij.as9370.imyvm.com```
+  - **广西**  ```hk-2.pccw.as133752.imyvm.com```
   - **广东其他地区**  ```hk-1.cn2.as45102.imyvm.com```
   - **海南**  ```数据缺失```
 
 * ### 华北区域
-  - **天津**  ```hk-1.cn2.as45102.imyvm.com```
-  - **内蒙古**  ```hk-1.cn2.as45102.imyvm.com```
+  - **天津**  ```hk-2.pccw.as133752.imyvm.com```
+  - **内蒙古**  ```hk-2.pccw.as133752.imyvm.com```
   - **北京**  ```数据缺失```
   - **河北**  ```数据缺失```
   - **山西**  ```数据缺失```
@@ -164,24 +164,24 @@
   - **美国**
   ```
   us-1.he.as63949.imyvm.com           海外默认线路
-  
+
   us-2.zenlayer.as21859.imyvm.com     港澳台默认线路
   ```
   - **日本**
   ```
   jp-1.iij.as9370.imyvm.com           偶尔会抽风
-  
+
   jp-2.kddi.as9370.imyvm.com          备用
   ```
   - **香港**
   ```
   hk-1.cn2.as45102.imyvm.com          全程 CN2 线路
-  
+
   hk-2.pccw.as133752.imyvm.com        PACNET + PCCW
   ```
   - **国内中转**
   ```
   cn-1.cu.as4837.imyvm.com            给那些奇葩区域准备的
-  
+
   cn-2.cm.as9808.imyvm.com            同上
   ```
