@@ -542,7 +542,10 @@ MaxLevel:
   '200':
     Message: '等级达到 200 级'
     Name: '&c实力装逼'
-    
+      '300':
+    Message: '等级达到 300 级'
+    Name: '&cYilya无聊了'
+
 # When a potion is consumed.
 ConsumedPotions:
   #'100':
